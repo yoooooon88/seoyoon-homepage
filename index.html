@@ -20,6 +20,11 @@ a{color:inherit}
 .tile:hover{transform:scale(1.015)}
 .fld:focus{outline:3px solid rgba(79,98,73,0.35);border-color:#4F6249 !important}
 .fld::placeholder{color:#6E6E73}
+@keyframes tap{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.tap{animation:tap 1.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.tap{animation:none}}
+.chat-card{transition:transform .3s ease,background .3s ease}
+.chat-card:hover{transform:scale(1.02);background:#000000 !important}
 </style>
 
 </head>
@@ -44,7 +49,7 @@ a{color:inherit}
   </header>
 
   <!-- HERO -->
-  <section id="top" style="background:#FBFBFD;text-align:center;padding:88px 24px 0;box-sizing:border-box">
+  <section id="top" style="background:#FBFBFD;text-align:center;padding:88px 24px 96px;box-sizing:border-box">
     <div style="max-width:980px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px">
       <p style="margin:0;font-size:clamp(17px,2vw,21px);font-weight:700;color:#4F6249">사회복지사 이서윤</p>
       <h1 style="margin:0;font-size:clamp(38px,8vw,88px);font-weight:700;line-height:1.12;letter-spacing:-0.035em;text-wrap:balance">사람과 마음을 잇고,<br>현장의 온기를 기록합니다</h1>
@@ -55,20 +60,31 @@ a{color:inherit}
         <a class="btn-line" href="#consult" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;box-sizing:border-box;background:transparent;color:#4F6249;border:1.5px solid #4F6249;text-decoration:none;font-weight:500;font-size:17px;border-radius:980px">문의하기</a>
       </div>
     </div>
-    <div style="width:100%;max-width:460px;margin:80px auto 0;aspect-ratio:4/5;box-sizing:border-box;background:#E8E8ED;border-radius:36px 36px 0 0;overflow:hidden">
+    <div style="width:100%;max-width:460px;margin:80px auto 0;aspect-ratio:4/5;box-sizing:border-box;background:#E8E8ED;border-radius:36px;overflow:hidden">
       <img src="profile.jpg" alt="사회복지사 이서윤 프로필 사진" style="width:100%;height:100%;object-fit:cover;object-position:50% 8%;display:block">
     </div>
+    <a class="chat-card" href="https://open.kakao.com/o/g0hHmySi" target="_blank" rel="noopener" aria-label="마음의 물결 카카오톡 오픈채팅 입장하기" style="width:100%;max-width:460px;margin:20px auto 0;box-sizing:border-box;padding:18px 22px;background:#1D1D1F;border-radius:28px;display:flex;align-items:center;gap:16px;text-align:left;text-decoration:none;color:#F5F5F7">
+      <span style="flex:none;width:56px;height:56px;border-radius:50%;background:#2C2C2E;display:flex;align-items:center;justify-content:center">
+        <svg class="tap" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#A8C49C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+      </span>
+      <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+        <span style="font-size:14px;font-weight:700;color:#A8C49C">마음의 물결</span>
+        <span style="font-size:19px;font-weight:700;letter-spacing:-0.02em">매일 아침 마음 비타민 받기</span>
+        <span style="font-size:15px;color:#A1A1A6">카카오톡 오픈채팅 입장하기</span>
+      </span>
+      <svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="#A8C49C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3l6 6-6 6"/></svg>
+    </a>
   </section>
 
   <!-- ABOUT -->
   <section id="about" style="background:#000000;color:#F5F5F7;padding:140px 24px;box-sizing:border-box">
     <div style="max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:56px">
       <div style="display:flex;flex-direction:column;gap:24px">
-        <p style="margin:0;font-size:clamp(15px,1.6vw,19px);font-weight:700;color:#A8C49C">실천을 기록으로 남기는 이유</p>
-        <h2 style="margin:0;font-size:clamp(32px,6vw,72px);font-weight:700;line-height:1.18;letter-spacing:-0.035em;color:#F5F5F7;text-wrap:balance">기록되지 않은 실천은 흩어지지만, <span style="color:#86868B">기록된 온기는 다른 이에게 용기가 됩니다.</span></h2>
+        <p style="margin:0;font-size:clamp(15px,1.6vw,19px);font-weight:700;color:#A8C49C">어르신과 함께하는 기록</p>
+        <h2 style="margin:0;font-size:clamp(32px,6vw,72px);font-weight:700;line-height:1.18;letter-spacing:-0.035em;color:#F5F5F7;text-wrap:balance">어르신의 하루에는,<br><span style="color:#86868B">한 사람의 평생이 있습니다.</span></h2>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:40px 72px;align-items:flex-start">
-        <p style="margin:0;flex:1 1 380px;min-width:0;font-size:clamp(17px,1.8vw,21px);line-height:1.6;color:#A1A1A6;text-wrap:pretty">저는 사회복지사로서 당사자의 삶을 존중하며 곁에서 함께 걷는 실천을 지향합니다. 일상의 작은 물결 속에서 사람의 가치를 발견하고, 현장에서 듣고 배운 마음을 정성껏 기록합니다.</p>
+        <p style="margin:0;flex:1 1 380px;min-width:0;font-size:clamp(17px,1.8vw,21px);line-height:1.6;color:#A1A1A6;text-wrap:pretty"><span style="display:block;margin-bottom:16px;font-size:clamp(20px,2.2vw,26px);font-weight:700;line-height:1.4;letter-spacing:-0.02em;color:#F5F5F7">기록하지 않으면 사라지는 삶의 이야기,<br>어르신의 하루를 정성껏 남깁니다.</span>저는 사회복지사로서 어르신의 삶을 존중하며 곁에서 함께 걷는 실천을 지향합니다. 일상의 작은 물결 속에서 사람의 가치를 발견하고, 현장에서 듣고 배운 마음을 기록으로 이어 그 온기가 다른 이에게도 닿도록 하겠습니다.</p>
         <ul style="margin:0;padding:0;list-style:none;flex:1 1 300px;min-width:0;display:flex;flex-wrap:wrap;gap:12px" aria-label="전문 분야 키워드">
           <li style="padding:10px 20px;background:#1D1D1F;border-radius:980px;font-size:16px;font-weight:500;color:#E8E8ED">#사회복지실천</li>
           <li style="padding:10px 20px;background:#1D1D1F;border-radius:980px;font-size:16px;font-weight:500;color:#E8E8ED">#현장기록</li>
@@ -197,13 +213,13 @@ a{color:inherit}
           <textarea class="fld" id="f-msg" rows="5" placeholder="예) 지역사회 연결 프로젝트를 준비 중인데, 현장 기록을 정리하는 방법을 상담받고 싶습니다. 희망 일정과 소속 기관을 함께 적어 주세요." style="width:100%;box-sizing:border-box;min-height:140px;padding:14px 16px;font-size:17px;line-height:1.55;font-family:inherit;color:#1D1D1F;background:#F5F5F7;border:1px solid #D2D2D7;border-radius:14px;resize:vertical"></textarea>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-          <a class="btn-solid" id="f-send" href="mailto:jerrycoco501@naver.com" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;box-sizing:border-box;background:#4F6249;color:#FFFFFF;text-decoration:none;font-weight:500;font-size:17px;border-radius:980px">상담 신청하기</a>
-          <p style="margin:0;font-size:14px;line-height:1.5;color:#6E6E73">누르면 메일 앱이 열리고, 작성한 내용이 jerrycoco501@naver.com 으로 전달됩니다.</p>
+          <a class="btn-solid" id="f-send" href="mailto:yoooooon33@naver.com" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;box-sizing:border-box;background:#4F6249;color:#FFFFFF;text-decoration:none;font-weight:500;font-size:17px;border-radius:980px">상담 신청하기</a>
+          <p style="margin:0;font-size:14px;line-height:1.5;color:#6E6E73">누르면 메일 앱이 열리고, 작성한 내용이 yoooooon33@naver.com 으로 전달됩니다.</p>
         </div>
       </div>
       <div style="width:100%;max-width:760px;box-sizing:border-box;padding:40px 36px;background:#FFFFFF;border-radius:32px;display:flex;flex-direction:column;align-items:center;gap:10px">
         <h3 style="margin:0;font-size:clamp(22px,2.6vw,28px);font-weight:700;letter-spacing:-0.02em">협업 및 강연 · 자문 문의</h3>
-        <a class="lnk" href="mailto:jerrycoco501@naver.com" style="color:#4F6249;font-weight:500;font-size:19px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center">jerrycoco501@naver.com</a>
+        <a class="lnk" href="mailto:yoooooon33@naver.com" style="color:#4F6249;font-weight:500;font-size:19px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center">yoooooon33@naver.com</a>
       </div>
     </div>
   </section>
@@ -224,7 +240,7 @@ var $=function(i){return document.getElementById(i)};
 function upd(){
 var t=$('f-topic').value,n=$('f-name').value;
 var b='이름: '+n+'\n연락처: '+$('f-contact').value+'\n상담 분야: '+t+'\n\n상담 내용:\n'+$('f-msg').value;
-$('f-send').href='mailto:jerrycoco501@naver.com?subject='+encodeURIComponent('[상담신청] '+t+(n?' - '+n:''))+'&body='+encodeURIComponent(b);
+$('f-send').href='mailto:yoooooon33@naver.com?subject='+encodeURIComponent('[상담신청] '+t+(n?' - '+n:''))+'&body='+encodeURIComponent(b);
 }
 ['f-name','f-contact','f-topic','f-msg'].forEach(function(i){$(i).addEventListener('input',upd);$(i).addEventListener('change',upd);});
 upd();
